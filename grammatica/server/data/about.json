@@ -1,0 +1,29 @@
+[{
+    "name": "flare.experienced",
+        "size": 3812,
+        "imports": ["flare.beginner",
+        "flare.ideator",
+]} , {
+    "name": "flare.business",
+        "size": 3812,
+        "imports": ["flare.experienced",
+        "flare.ideator",
+]} , {
+    "name": "flare.ideator",
+        "size": 3812,
+        "imports": ["flare.business",
+]} , {
+    "name": "flare.beginner",
+        "size": 3812,
+        "imports": ["flare.experienced",
+]}  , {
+    "name": "flare.career",
+        "size": 3812,
+        "imports": ["flare.business",
+        "flare.ideator"
+]} , {
+    "name": "flare.opensource",
+        "size": 3812,
+        "imports": ["flare.business",
+        "flare.ideator"
+]}]

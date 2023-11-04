@@ -1,0 +1,24 @@
+.node circle {
+	fill: #fff;
+	stroke: #900000;
+	stroke-width: 1.5px;
+}
+
+.node text {
+	font-family: 'Poiret One', cursive;
+	fill: #666;
+	text-shadow: none;
+}
+
+.link {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}
+
+svg {
+	position: absolute;
+	left: 15%;
+	top: 10%
+	
+}

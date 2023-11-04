@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/header %>
+</head>
+<body class="frontPage">
+	<div class="iconDiv"></div>	
+	<div class="mottoDiv"></div>
+<script>
+	window.console = window.console || function(t) {};
+	if (document.location.search.match(/type=embed/gi)) {
+		window.parent.postMessage("resize", "*");
+	}
+</script>	
+	<div class="cssDiv"></div>
+</body>
+	<script src="js/codepen/css_live_reload_init.js"></script>
+	<script src="js/bowser/bowser.min.js"></script>
+	<script src="js/pagespecefic/frontpage.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/pagespecefic/frontpage.css" />
+	<link type="text/css" rel="stylesheet" href="css/codepen/reset.css" />
+</html>

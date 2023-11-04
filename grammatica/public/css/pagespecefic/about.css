@@ -1,0 +1,54 @@
+.node {
+    font: 5 10px;
+    fill: #4D4D4D;
+    font-family: 'Poiret One', cursive;
+}
+.node:hover {
+    fill: #000000;
+}
+svg .link {
+    stroke: #BDBDBD;
+    stroke-opacity: 0.4;
+    fill: none;
+    pointer-events: none;
+}
+.node:hover, .node--source, .node--target, .node--both {
+    font-weight: 500;
+}
+.node--source {
+    fill: #0000A0;
+}
+.node--target {
+    fill: #FE2E2E;
+}
+.node--both {
+    fill: #BF00FF;
+}
+svg .link--source, svg .link--target, svg .link--both {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+}
+svg .link--source {
+    stroke: #FE2E2E;
+}
+svg .link--target {
+    stroke: #0000A0;
+}
+svg .link--both {
+    stroke: #BF00FF;
+}
+.d3-tip {
+    line-height: 1;
+    padding: 5px 15px;
+    width: 200px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 20);
+}
+
+svg {
+	position: absolute;
+	left: 25%;
+	top: 8%;
+	z-index:0;
+}

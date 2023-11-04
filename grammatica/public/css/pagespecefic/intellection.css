@@ -1,0 +1,10 @@
+.node circle {
+	fill: #66FF66;
+	stroke: #66FF66;
+}
+
+svg {
+	position: absolute;
+	left: 27%;
+	top: 3%;
+}

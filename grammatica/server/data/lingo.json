@@ -1,0 +1,157 @@
+[{
+    "name": "flare.mvcpattern",
+        "citation": "An implementation pattern utilizing the concepts of models, views, and controllers.",
+        "size": 3812,
+        "imports": ["flare.model",
+        	"flare.view",
+        	"flare.controller",
+        	"flare.domainlayer"]
+}, {
+    "name": "flare.model",
+        "citation": "The data to be displayed (and how it’s organized, as well as structured after getting picked up from the database or other sources) in the view or handled by logic routed by the controller.",
+        "size": 3812,
+        "imports": ["flare.mvcpattern",
+        	"flare.controller",
+        	"flare.domainlayer",
+        	"flare.datalayer",
+        	"flare.orm"]
+}, {
+    "name": "flare.view",
+        "citation": "What gets displayed (to the user, etc.).",
+        "size": 3812,
+        "imports": ["flare.mvcpattern",
+        	"flare.controller",
+        	"flare.domainlayer",
+        	"flare.ui"]
+}, {
+    "name": "flare.controller",
+        "citation": "Determines what gets displayed and what logic is executed based on request or specified need.",
+        "size": 3812,
+        "imports": ["flare.mvcpattern",
+        	"flare.view",
+        	"flare.model"]
+}, {
+    "name": "flare.servicelayerarchitecture",
+        "citation": "The seperation of a web application into areas of concern.",
+        "size": 3812,
+        "imports": ["flare.domainlayer",
+        	"flare.datalayer",
+        	"flare.servicelayer",
+        	"flare.ui",
+        	"flare.webapplication"]
+}, {
+    "name": "flare.domainlayer",
+        "citation": "Structures and organizes data layer information into information usable by service layer. Contains non-persisted data (data that has not been sent to database) using models. Service layer logic operates on domain entities and persisted intelligently (as need be only) to data layer using ORM.",
+        "size": 3812,
+        "imports": ["flare.model",
+        "flare.orm"]
+}, {
+    "name": "flare.servicelayer",
+        "citation": "The business logic of the web application",
+        "size": 3812,
+        "imports": ["flare.servicelayerarchitecture"]
+}, {
+    "name": "flare.ui",
+        "citation": "What the user manipulates through their client. The view.",
+        "size": 3812,
+        "imports": ["flare.view"]
+}, {
+    "name": "flare.servicelayer",
+        "citation": "The business logic of the web application",
+        "size": 3812,
+        "imports": ["flare.servicelayerarchitecture"]
+}, {
+    "name": "flare.frontend",
+        "citation": "Code, logic, and operations executed on/in a web client (user’s browser).",
+        "size": 3812,
+        "imports": ["flare.webapplication"]
+}, {
+    "name": "flare.backend",
+        "citation": "Code, logic, and operations executed on the web server.",
+        "size": 3812,
+        "imports": ["flare.webapplication"]
+}, {
+    "name": "flare.orm",
+        "citation": "Object relational mapping. Maps entities in the datalayer to domain entities in the domain layer.",
+        "size": 3812,
+        "imports": ["flare.domainlayer",
+        	"flare.model",
+        	"flare.datalayer"]
+}, {
+    "name": "flare.versioncontrolsystem",
+        "citation": "A tool used to manage code changes made by one or more developers.",
+        "size": 3812,
+        "imports": ["flare.coderepository"]
+}, {
+    "name": "flare.datalayer",
+        "citation": "Source of data and information. The “heart and soul” of the application. Often a database or databases.",
+        "size": 3812,
+        "imports": ["flare.domainlayer",
+        	"flare.model",
+             "flare.orm"]
+}, {
+    "name": "flare.ipaddress",
+        "citation": "Numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication.",
+        "size": 3812,
+        "imports": []
+}, {
+    "name": "flare.techstack",
+        "citation": "The primary or primary programming languages and other technologies connected to a database that comprise a web application or that enable it to run.",
+        "size": 3812,
+        "imports": ["flare.webapplication"]
+}, {
+    "name": "flare.rest",
+        "citation": "A web service communication protocol utilizing JSON to transmit and package data between HTTP(s) endpoints.",
+        "size": 3812,
+        "imports": ["flare.wscp"]
+}, {
+    "name": "flare.soap",
+        "citation": "A web service communication protocol utilizing XML to transmit and package data between endpoints",
+        "size": 3812,
+        "imports": ["flare.wscp"]
+}, {
+    "name": "flare.applicationserver",
+        "citation": "A server on which a web application runs. Users make requests to the server – the server responds by serving the correct web page using models, views, and controllers.",
+        "size": 3812,
+        "imports": ["flare.webapplication",
+        "flare.server"]
+}, {
+    "name": "flare.server",
+        "citation": "A computer program or a machine that waits for requests from other machines or software (clients) and responds to them.",
+        "size": 3812,
+        "imports": []
+}, {
+    "name": "flare.saas",
+        "citation": "Software as a service. Where a web application is hosted locally and licensed to clients and users.",
+        "size": 3812,
+        "imports": ["flare.webapplication"]
+}, {
+    "name": "flare.coderepository",
+        "citation": "A place where code is stored. Often integrated with a version control system.",
+        "size": 3812,
+        "imports": ["flare.versioncontrolsystem"]
+}, {
+    "name": "flare.cloud",
+        "citation": "Services or applications hosted on third-party servers.",
+        "size": 3812,
+        "imports": ["flare.server"]
+}, {
+    "name": "flare.webapplication",
+        "citation": "A client-server software application in which the client (or user interface) runs in a web browser.",
+        "size": 3812,
+        "imports": ["flare.applicationserver",
+        	"flare.techstack",
+        	"flare.servicelayerarchitecture"]
+}, {
+    "name": "flare.dns",
+        "citation": "Domain Name Service. Associates human-readable URL addresses with IP addresses.",
+        "size": 3812,
+        "imports": ["flare.ipaddress"]
+}, {
+    "name": "flare.wscp",
+        "citation": "Web Service Communication Protocol. A standard for transmitting data between web services.",
+        "size": 3812,
+        "imports": ["flare.soap",
+                "flare.rest"]
+}
+]
