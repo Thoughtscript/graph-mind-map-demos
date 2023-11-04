@@ -1,0 +1,67 @@
+const config = {
+  radius: 25
+}
+
+const r = config.radius
+
+const getCanvas = function(el) {
+  const canvas = document.getElementById(el);
+  const ctx = canvas.getContext("2d");
+  canvas.width = r * 15;
+  canvas.height = r * 15;
+  return ctx;
+};
+
+const drawCircle = function(ctx, x, y, color) {
+  ctx.beginPath();
+  ctx.shadowColor = color || 'black';
+  ctx.shadowBlur = 25;
+  ctx.arc(x, y, r, 0, Math.PI * 2, true);
+  
+  //identity matrix
+  ctx.transform(1, 0, 0, 1, 0, 0); 
+  //ctx.transform(.999, .025, 0, .965, 0, 0); 
+  
+  ctx.stroke();
+};
+
+const drawLine = function(ctx, x1, x2, y1, y2, color) {
+  ctx.beginPath();
+  ctx.shadowColor = color || 'black';
+  ctx.shadowBlur = 25;
+  
+  //ctx.moveTo(x1 + r, y1);
+  //ctx.quadraticCurveTo(x1 + r, y1+r, x2 - r, y2);
+  
+  ctx.quadraticCurveTo(x1 + r, y1, x2 - r, y2);
+  ctx.stroke();
+};
+
+window.onload = function() {
+  let c = getCanvas("here");
+  drawCircle(c, r * 2, r * 2);
+  drawCircle(c, r * 2 - 2, r * 2 - 2);
+  drawCircle(c, r * 8, r * 2);
+  drawCircle(c, r * 8 - 2, r * 2 - 2);
+  drawLine(c, r * 2, r * 8, r * 2, r * 2);
+  drawLine(c, r * 2 - 4, r * 8 - 4, r * 2 - 4, r * 2 - 4);
+  
+  drawCircle(c, r * 2, r * 6);
+  drawCircle(c, r * 2 - 2, r * 6 - 2);
+  drawCircle(c, r * 12, r * 7);
+  drawCircle(c, r * 12 - 2, r * 7 - 2);
+  drawLine(c, r * 2, r * 12, r * 2, r * 7);
+  drawLine(c, r * 2 - 4, r * 12 - 4, r * 2 - 6, r * 7 - 6);
+  drawLine(c, r * 2, r * 12, r * 6, r * 7);
+  drawLine(c, r * 2 - 4, r * 12 - 4, r * 6 - 4, r * 7 - 4);
+  
+  drawCircle(c, r * 4, r * 9);
+  drawCircle(c, r * 4 - 2, r * 9 - 2);
+  drawCircle(c, r * 8, r * 13);
+  drawCircle(c, r * 8 - 2, r * 13 - 2);
+  drawLine(c, r, r * 4, r * 7, r * 9);
+  drawLine(c, r - 4, r * 4 - 4, r * 7 - 4, r * 9 - 4);
+  drawLine(c, r * 4, r * 8, r *9, r * 13);
+  drawLine(c, r * 4 - 4, r * 8 - 4, r * 9 - 4, r * 13 - 4);
+  
+};

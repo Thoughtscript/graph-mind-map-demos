@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  opacity: 0.9;
+  font-family: "Lato", sans-serif;
+}
+
+div#wrapper {
+  position: relative;
+  left: 15%;
+  top: 0;
+  height: 638px;
+  width: 414px;
+  border: 4px solid black;
+  transform-style: preserve-3d;
+  transform: translateX(55%) translateY(5.5%) rotateX(30deg) rotateZ(30deg);
+  -webkit-transform-origin: 35% 70%;
+  transform-origin: 35% 70%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 0;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 3px black;
+}
+
+.isometric:hover {
+  opacity: 0.75;
+}
+
+canvas {
+  border: 4px solid black;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 2px;
+  top: -4px;
+  background: #70e1f5;
+  background: -webkit-linear-gradient(to bottom, #ffd194, #70e1f5);
+  background: linear-gradient(to bottom, #ffd194, #70e1f5);
+  box-shadow: 3px 3px 5px 3px black;
+}
+
+.isometric {
+  border: 4px solid black;
+  border-radius: 15px;
+  width: 375px;
+  height: 250px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 2.5px;
+  top: -8px;
+  opacity: 0.7;
+  box-shadow: 3px 3px 5px 3px black;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.isometric > span {
+  text-align: center;
+  line-height: 45px;
+  font-size: 27px;
+}
+
+.isometric:hover {
+  transform-style: preserve-3d;
+  transform: translateY(-15px);
+  z-index: 999;
+  opacity: 0.5;
+}
+
+.isometric.one,
+.isometric.three {
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+}
+
+.isometric.two {
+  background-image: linear-gradient(
+    to left,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+}
